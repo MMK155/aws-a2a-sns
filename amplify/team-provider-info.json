@@ -1,0 +1,42 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pddriver-dev-180718-authRole",
+      "UnauthRoleArn": "arn:aws:iam::171242394864:role/amplify-pddriver-dev-180718-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::171242394864:role/amplify-pddriver-dev-180718-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-pddriver-dev-180718-deployment",
+      "UnauthRoleName": "amplify-pddriver-dev-180718-unauthRole",
+      "StackName": "amplify-pddriver-dev-180718",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:171242394864:stack/amplify-pddriver-dev-180718/b5245a00-a8a6-11ee-9013-0292c081a612",
+      "AmplifyAppId": "d1jwwsmom6f5d4"
+    },
+    "categories": {
+      "api": {
+        "pddriver": {},
+        "driverCrudApi": {}
+      },
+      "function": {
+        "DriverCrud": {
+          "deploymentBucketName": "amplify-pddriver-dev-180718-deployment",
+          "s3Key": "amplify-builds/DriverCrud-665776444e2b3544516c-build.zip",
+          "pdDriverTableNameDev": "PdDriver-mw4zxz72czeoxmnropdjx5kwt4-dev"
+        },
+        "pddriverpdDriverLayer": {
+          "deploymentBucketName": "amplify-pddriver-dev-180718-deployment",
+          "s3Key": "amplify-builds/pddriverpdDriverLayer-LambdaLayerVersionb7c3b3a7-build.zip"
+        },
+        "PublishPdDriver": {
+          "topicArnDev": "arn:aws:sns:ap-northeast-2:171242394864:PdTopic",
+          "deploymentBucketName": "amplify-pddriver-dev-180718-deployment",
+          "s3Key": "amplify-builds/PublishPdDriver-4f43497a596d6c6a5745-build.zip"
+        },
+        "SubcribePdDriver": {
+          "deploymentBucketName": "amplify-pddriver-dev-180718-deployment",
+          "s3Key": "amplify-builds/SubcribePdDriver-2f385533355872494e68-build.zip",
+          "ddDriverTableNameDev": "DdDriver-jvbeflrkyfg7bkt7ob5n57jrxi-dev"
+        }
+      }
+    }
+  }
+}

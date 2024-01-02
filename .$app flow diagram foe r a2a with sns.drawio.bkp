@@ -1,0 +1,103 @@
+<mxfile host="Electron" modified="2024-01-02T12:07:46.359Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="9A8D7Xc3d_LI_5AHWQ0F" version="22.1.16" type="device">
+  <diagram name="Page-1" id="2YpXlx_c9XGTu5oI2Lzf">
+    <mxGraphModel dx="2537" dy="909" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JsiH1iGUgUjGQNMO4You-6" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="90" width="200" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="JsiH1iGUgUjGQNMO4You-8" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="170" y="80" width="200" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="VnpWTOlfEBQUTf9JGCEi-2" value="PDApp" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-280" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VnpWTOlfEBQUTf9JGCEi-3" value="PdDriver" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="-270" y="250" width="100" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VnpWTOlfEBQUTf9JGCEi-5" value="DDApp" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VnpWTOlfEBQUTf9JGCEi-6" value="DdDriver" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="210" y="240" width="100" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VnpWTOlfEBQUTf9JGCEi-7" value="Dynamodb Table&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-255" y="270" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VnpWTOlfEBQUTf9JGCEi-8" value="Dynamodb Table" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="225" y="260" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NjwPP75FpcqSopIPJG5D-1" value="&lt;br&gt;LambdaTrigger With DynamoDb PdDriver Table&lt;br&gt;PublishPdDriver&lt;br&gt;(PDApp Function)&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="-295" y="480" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="NjwPP75FpcqSopIPJG5D-2" value="&lt;br&gt;SubcribePdDrive&lt;br&gt;LambdaFunction&lt;br&gt;(PDApp Function)" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="195" y="480" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="vddSsn2rnT433rTBKMC1-1" value="&lt;b&gt;A2A with Aws sns&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="-340" y="10" width="725" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vddSsn2rnT433rTBKMC1-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-230" y="420" as="sourcePoint" />
+            <mxPoint x="-230" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vddSsn2rnT433rTBKMC1-8" value="&lt;font color=&quot;#303030&quot;&gt;When Pd drive add in a in table it trigger this function and from&amp;nbsp; &amp;nbsp;with the help of stream event we publish Driver&amp;nbsp;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#00CCCC;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-620" y="475" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vddSsn2rnT433rTBKMC1-9" value="&lt;font style=&quot;font-size: 13px;&quot; color=&quot;#504e4e&quot;&gt;SubcribePdDriver Lambda function attched with sns topic subcriber as an protocal this function subcribe message and get PdDriver from it and add it in DD Driver Table&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#00CCCC;strokeColor=none;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="450" y="410" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vddSsn2rnT433rTBKMC1-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="NjwPP75FpcqSopIPJG5D-1" target="NjwPP75FpcqSopIPJG5D-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="620" as="sourcePoint" />
+            <mxPoint x="120" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JsiH1iGUgUjGQNMO4You-1" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.017;entryY=0.319;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="vddSsn2rnT433rTBKMC1-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="347" y="556" as="sourcePoint" />
+            <mxPoint x="417" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="397" y="537" />
+              <mxPoint x="347" y="487" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JsiH1iGUgUjGQNMO4You-3" value="SyncDdDriverToPd&lt;br&gt;(DDApp Function)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="195" y="680" width="155" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="JsiH1iGUgUjGQNMO4You-4" value="&lt;font color=&quot;#504e4e&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;This lambda function add with DD Driver Table as a trigger which update zone in PdDriver Table when DdDrive table Zone Updated&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#00CCCC;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="670" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="JsiH1iGUgUjGQNMO4You-10" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="NjwPP75FpcqSopIPJG5D-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-440" y="560" as="sourcePoint" />
+            <mxPoint x="-390" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-390" y="560" />
+              <mxPoint x="-440" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JsiH1iGUgUjGQNMO4You-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.573;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="NjwPP75FpcqSopIPJG5D-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="470" as="sourcePoint" />
+            <mxPoint x="280" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JsiH1iGUgUjGQNMO4You-12" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=-0.022;entryY=0.431;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="JsiH1iGUgUjGQNMO4You-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="760" as="sourcePoint" />
+            <mxPoint x="400" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="760" />
+              <mxPoint x="350" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

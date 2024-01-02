@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Action": [
+              "dynamodb:DescribeStream",
+              "dynamodb:GetRecords",
+              "dynamodb:GetShardIterator",
+              "dynamodb:ListStreams",
+              "sns:Publish"
+          ],
+          "Resource": [
+              "arn:aws:dynamodb:ap-northeast-2:171242394864:table/PdDriver-mw4zxz72czeoxmnropdjx5kwt4-dev/stream/2024-01-01T13:21:04.193",
+              "arn:aws:sns:ap-northeast-2:171242394864:PdTopic"
+          ],
+          "Effect": "Allow"
+      }
+  ]
+}
