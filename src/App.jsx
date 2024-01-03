@@ -1,7 +1,15 @@
+//aws imports
 import { Amplify, Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
+
+//providers
+import { Provider } from 'react-redux';
+//configure aws-amplify
+
+//react imports
+import MainLayout from './layout/MainLayout';
 Amplify.configure(awsconfig);
-import './App.css'
+
 try {
   Amplify.configure(awsconfig.default ? awsconfig.default : awsconfig);
 } catch (err) {
@@ -11,9 +19,7 @@ function App() {
 
   return (
     <>
-      <div className="card">
-        <p>PD Driver is here</p>
-      </div>
+      <MainLayout />
 
     </>
   )
