@@ -2,6 +2,6 @@
     "AppSyncApiName": "pddriver",
     "DynamoDBBillingMode": "PAY_PER_REQUEST",
     "DynamoDBEnableServerSideEncryption": false,
-    "S3DeploymentBucket": "amplify-pddriver-dev-180718-deployment",
+    "S3DeploymentBucket": "amplify-pddriver-test-175351-deployment",
     "S3DeploymentRootKey": "amplify-appsync-files/76861b38352d9a2e70705d24fdb432103c83dd59"
 }

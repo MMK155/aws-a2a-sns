@@ -155,7 +155,7 @@
     "apidriverCrudApi": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-dev-180718-deployment/amplify-cfn-templates/api/driverCrudApi-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-test-175351-deployment/amplify-cfn-templates/api/driverCrudApi-cloudformation-template.json",
         "Parameters": {
           "functionDriverCrudName": {
             "Fn::GetAtt": [
@@ -169,30 +169,30 @@
               "Outputs.Arn"
             ]
           },
-          "env": "dev"
+          "env": "test"
         }
       }
     },
     "apipddriver": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-dev-180718-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-test-175351-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
           "AppSyncApiName": "pddriver",
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
           "DynamoDBEnableServerSideEncryption": false,
-          "S3DeploymentBucket": "amplify-pddriver-dev-180718-deployment",
+          "S3DeploymentBucket": "amplify-pddriver-test-175351-deployment",
           "S3DeploymentRootKey": "amplify-appsync-files/76861b38352d9a2e70705d24fdb432103c83dd59",
-          "env": "dev"
+          "env": "test"
         }
       }
     },
     "functionDriverCrud": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-dev-180718-deployment/amplify-cfn-templates/function/DriverCrud-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-test-175351-deployment/amplify-cfn-templates/function/DriverCrud-cloudformation-template.json",
         "Parameters": {
-          "deploymentBucketName": "amplify-pddriver-dev-180718-deployment",
+          "deploymentBucketName": "amplify-pddriver-test-175351-deployment",
           "s3Key": "amplify-builds/DriverCrud-665776444e2b3544516c-build.zip",
           "pdDriverTableNameDev": "PdDriver-mw4zxz72czeoxmnropdjx5kwt4-dev",
           "functionpddriverpdDriverLayerArn": {
@@ -201,17 +201,17 @@
               "Outputs.Arn"
             ]
           },
-          "env": "dev"
+          "env": "test"
         }
       }
     },
     "functionPublishPdDriver": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-dev-180718-deployment/amplify-cfn-templates/function/PublishPdDriver-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-test-175351-deployment/amplify-cfn-templates/function/PublishPdDriver-cloudformation-template.json",
         "Parameters": {
           "topicArnDev": "arn:aws:sns:ap-northeast-2:171242394864:PdTopic",
-          "deploymentBucketName": "amplify-pddriver-dev-180718-deployment",
+          "deploymentBucketName": "amplify-pddriver-test-175351-deployment",
           "s3Key": "amplify-builds/PublishPdDriver-4f43497a596d6c6a5745-build.zip",
           "functionpddriverpdDriverLayerArn": {
             "Fn::GetAtt": [
@@ -219,16 +219,16 @@
               "Outputs.Arn"
             ]
           },
-          "env": "dev"
+          "env": "test"
         }
       }
     },
     "functionSubcribePdDriver": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-dev-180718-deployment/amplify-cfn-templates/function/SubcribePdDriver-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-test-175351-deployment/amplify-cfn-templates/function/SubcribePdDriver-cloudformation-template.json",
         "Parameters": {
-          "deploymentBucketName": "amplify-pddriver-dev-180718-deployment",
+          "deploymentBucketName": "amplify-pddriver-test-175351-deployment",
           "s3Key": "amplify-builds/SubcribePdDriver-2f385533355872494e68-build.zip",
           "ddDriverTableNameDev": "DdDriver-jvbeflrkyfg7bkt7ob5n57jrxi-dev",
           "functionpddriverpdDriverLayerArn": {
@@ -237,20 +237,20 @@
               "Outputs.Arn"
             ]
           },
-          "env": "dev"
+          "env": "test"
         }
       }
     },
     "functionpddriverpdDriverLayer": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-dev-180718-deployment/amplify-cfn-templates/function/pddriverpdDriverLayer-awscloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-pddriver-test-175351-deployment/amplify-cfn-templates/function/pddriverpdDriverLayer-awscloudformation-template.json",
         "Parameters": {
           "runtimes": "nodejs18.x",
-          "description": "Updated layer version 2024-01-01T14:30:00.908Z",
-          "deploymentBucketName": "amplify-pddriver-dev-180718-deployment",
-          "s3Key": "amplify-builds/pddriverpdDriverLayer-LambdaLayerVersionb7c3b3a7-build.zip",
-          "env": "dev"
+          "description": "Updated layer version 2024-01-02T12:56:35.399Z",
+          "deploymentBucketName": "amplify-pddriver-test-175351-deployment",
+          "s3Key": "amplify-builds/pddriverpdDriverLayer-LambdaLayerVersion7973b59c-build.zip",
+          "env": "test"
         }
       }
     }

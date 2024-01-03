@@ -368,7 +368,7 @@
         "Name": "driverCrudApi"
       }
     },
-    "driverCrudApiDefault4XXResponse53b64bde": {
+    "driverCrudApiDefault4XXResponsed89849e4": {
       "Type": "AWS::ApiGateway::GatewayResponse",
       "Properties": {
         "ResponseType": "DEFAULT_4XX",
@@ -383,7 +383,7 @@
         }
       }
     },
-    "driverCrudApiDefault5XXResponse53b64bde": {
+    "driverCrudApiDefault5XXResponsed89849e4": {
       "Type": "AWS::ApiGateway::GatewayResponse",
       "Properties": {
         "ResponseType": "DEFAULT_5XX",
@@ -398,7 +398,7 @@
         }
       }
     },
-    "DeploymentAPIGWdriverCrudApia93f5af7": {
+    "DeploymentAPIGWdriverCrudApi79cd0ad7": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -416,8 +416,8 @@
         }
       },
       "DependsOn": [
-        "driverCrudApiDefault4XXResponse53b64bde",
-        "driverCrudApiDefault5XXResponse53b64bde"
+        "driverCrudApiDefault4XXResponsed89849e4",
+        "driverCrudApiDefault5XXResponsed89849e4"
       ]
     }
   }
