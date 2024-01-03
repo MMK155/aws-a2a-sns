@@ -17,7 +17,7 @@ const items = [
     },
 ];
 
-const MainLayout = () => {
+const MainLayout = ({ children }) => {
     const {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
@@ -63,7 +63,7 @@ const MainLayout = () => {
                         borderRadius: borderRadiusLG,
                     }}
                 >
-                    Content
+                    {children}
                 </div>
             </Content>
             <Footer

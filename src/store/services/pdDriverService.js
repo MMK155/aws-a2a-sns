@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // const API_URL = "http://localhost:5000/api";
 export const pdDriverApi = createApi({
   reducerPath: "pdDriverApi",
-  tagTypes: ["parameters"],
+  tagTypes: ["Drivers"],
   baseQuery: fetchBaseQuery({
     baseUrl: "https://775zu4ej72.execute-api.ap-northeast-2.amazonaws.com/dev",
   }),

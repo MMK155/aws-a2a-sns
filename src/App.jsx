@@ -4,10 +4,12 @@ import awsconfig from './aws-exports';
 
 //providers
 import { Provider } from 'react-redux';
+import Store from './store/store';
 //configure aws-amplify
 
 //react imports
 import MainLayout from './layout/MainLayout';
+import Routing from './Routes/routing';
 Amplify.configure(awsconfig);
 
 try {
@@ -19,8 +21,9 @@ function App() {
 
   return (
     <>
-      <MainLayout />
-
+      <Provider store={Store}>
+        <Routing />
+      </Provider>
     </>
   )
 }
