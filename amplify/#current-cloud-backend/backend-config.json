@@ -1,0 +1,173 @@
+{
+  "api": {
+    "driverCrudApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "DriverCrud"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "pddriver": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "function": {
+    "DriverCrud": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "pddriverpdDriverLayer"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "PublishPdDriver": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "pddriverpdDriverLayer"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "SubcribePdDriver": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "pddriverpdDriverLayer"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "pddriverpdDriverLayer": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_DriverCrud_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "DriverCrud"
+        }
+      ]
+    },
+    "AMPLIFY_function_DriverCrud_pdDriverTableNameDev": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "DriverCrud"
+        }
+      ]
+    },
+    "AMPLIFY_function_DriverCrud_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "DriverCrud"
+        }
+      ]
+    },
+    "AMPLIFY_function_PublishPdDriver_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "PublishPdDriver"
+        }
+      ]
+    },
+    "AMPLIFY_function_PublishPdDriver_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "PublishPdDriver"
+        }
+      ]
+    },
+    "AMPLIFY_function_PublishPdDriver_topicArnDev": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "PublishPdDriver"
+        }
+      ]
+    },
+    "AMPLIFY_function_SubcribePdDriver_ddDriverTableNameDev": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SubcribePdDriver"
+        }
+      ]
+    },
+    "AMPLIFY_function_SubcribePdDriver_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SubcribePdDriver"
+        }
+      ]
+    },
+    "AMPLIFY_function_SubcribePdDriver_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SubcribePdDriver"
+        }
+      ]
+    },
+    "AMPLIFY_function_pddriverpdDriverLayer_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "pddriverpdDriverLayer"
+        }
+      ]
+    },
+    "AMPLIFY_function_pddriverpdDriverLayer_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "pddriverpdDriverLayer"
+        }
+      ]
+    }
+  }
+}

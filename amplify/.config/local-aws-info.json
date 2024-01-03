@@ -1,0 +1,12 @@
+{
+  "dev": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/home/js/.amplify/awscloudformation/zS2fYwqsze"
+  },
+  "test": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/home/js/.amplify/awscloudformation/EJuRtGXZmU"
+  }
+}

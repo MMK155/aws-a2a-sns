@@ -1,0 +1,16 @@
+[
+  {
+    "Action": [
+      "dynamodb:DescribeStream",
+      "dynamodb:GetRecords",
+      "dynamodb:GetShardIterator",
+      "dynamodb:ListStreams",
+      "dynamodb:PutItem",
+      "dynamodb:Scan",
+      "dynamodb:BatchWriteItem"
+    ],
+    "Resource": [
+      "*"
+    ]
+  }
+]

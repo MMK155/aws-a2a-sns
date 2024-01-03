@@ -1,0 +1,220 @@
+type PdDriver {
+  id: ID!
+  name: String!
+  assigned_zone: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelPdDriverConnection {
+  items: [PdDriver]!
+  nextToken: String
+}
+
+input ModelPdDriverFilterInput {
+  id: ModelIDInput
+  name: ModelStringInput
+  assigned_zone: ModelStringInput
+  and: [ModelPdDriverFilterInput]
+  or: [ModelPdDriverFilterInput]
+  not: ModelPdDriverFilterInput
+}
+
+type Query {
+  getPdDriver(id: ID!): PdDriver
+  listPdDrivers(filter: ModelPdDriverFilterInput, limit: Int, nextToken: String): ModelPdDriverConnection
+}
+
+input ModelPdDriverConditionInput {
+  name: ModelStringInput
+  assigned_zone: ModelStringInput
+  and: [ModelPdDriverConditionInput]
+  or: [ModelPdDriverConditionInput]
+  not: ModelPdDriverConditionInput
+}
+
+input CreatePdDriverInput {
+  id: ID
+  name: String!
+  assigned_zone: String
+}
+
+input UpdatePdDriverInput {
+  id: ID!
+  name: String
+  assigned_zone: String
+}
+
+input DeletePdDriverInput {
+  id: ID!
+}
+
+type Mutation {
+  createPdDriver(input: CreatePdDriverInput!, condition: ModelPdDriverConditionInput): PdDriver
+  updatePdDriver(input: UpdatePdDriverInput!, condition: ModelPdDriverConditionInput): PdDriver
+  deletePdDriver(input: DeletePdDriverInput!, condition: ModelPdDriverConditionInput): PdDriver
+}
+
+input ModelSubscriptionPdDriverFilterInput {
+  id: ModelSubscriptionIDInput
+  name: ModelSubscriptionStringInput
+  assigned_zone: ModelSubscriptionStringInput
+  and: [ModelSubscriptionPdDriverFilterInput]
+  or: [ModelSubscriptionPdDriverFilterInput]
+}
+
+type Subscription {
+  onCreatePdDriver(filter: ModelSubscriptionPdDriverFilterInput): PdDriver @aws_subscribe(mutations: ["createPdDriver"])
+  onUpdatePdDriver(filter: ModelSubscriptionPdDriverFilterInput): PdDriver @aws_subscribe(mutations: ["updatePdDriver"])
+  onDeletePdDriver(filter: ModelSubscriptionPdDriverFilterInput): PdDriver @aws_subscribe(mutations: ["deletePdDriver"])
+}

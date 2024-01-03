@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/pd-driver": {
+      "name": "/pd-driver",
+      "lambdaFunction": "DriverCrud",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
